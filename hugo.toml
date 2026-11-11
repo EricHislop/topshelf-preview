@@ -1,14 +1,14 @@
-baseURL = "https://erichislop.github.io/sillage-preview/"
+baseURL = "https://erichislop.github.io/topshelf-preview/"
 languageCode = "en-nz"
-title = "Sillage"
+title = "Top Shelf Fragrances"
 enableRobotsTXT = false
 
 [params]
-  brand = "Sillage"
-  tagline = "Fragrance, by the millilitre."
+  brand = "Top Shelf Fragrances"
+  tagline = "Decants, 5ml to 15ml."
   description = "Small-bottle decants of the fragrances worth wearing. 5ml, 10ml and 15ml, filled in Wellington."
   currency = "NZD"
-  email = "hello@sillage.co.nz"
+  email = "hello@topshelffragrances.co.nz"
   city = "Wellington"
   freeShippingOver = 120
   demoSite = true

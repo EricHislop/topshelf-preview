@@ -1,4 +1,4 @@
-# Sillage: demo storefront
+# Top Shelf Fragrances: demo storefront
 
 A pitch demo for a fragrance decant shop. Hugo, hand written CSS, vanilla JS cart.
 No backend, no payment provider, no accounts.

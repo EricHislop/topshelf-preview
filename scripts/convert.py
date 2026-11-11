@@ -33,8 +33,9 @@ if os.path.exists(hero):
         small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 26)
     except Exception:
         big = small = ImageFont.load_default()
-    d.text((70, 300), "SILLAGE", font=big, fill=(244, 240, 232))
-    d.text((74, 420), "Fragrance, by the millilitre.  5ml / 10ml / 15ml", font=small, fill=(201, 168, 106))
+    d.text((70, 250), "TOP SHELF", font=big, fill=(244, 240, 232))
+    d.text((72, 360), "FRAGRANCES", font=small, fill=(244, 240, 232))
+    d.text((74, 430), "Fragrance, by the millilitre.  5ml / 10ml / 15ml", font=small, fill=(201, 168, 106))
     im.save(os.path.join(OUT, "og.jpg"), "JPEG", quality=86)
     print("og", os.path.getsize(os.path.join(OUT, "og.jpg")))
 

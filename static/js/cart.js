@@ -1,6 +1,6 @@
 (() => {
-  const S = window.SILLAGE || {};
-  const KEY = "sillage-bag";
+  const S = window.TSF || {};
+  const KEY = "tsf-bag";
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
   const money = (n) => "$" + (Math.round(n * 100) / 100).toFixed(n % 1 ? 2 : 0);

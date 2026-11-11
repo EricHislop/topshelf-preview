@@ -69,7 +69,8 @@ p{margin:0}
   border:1px solid rgba(244,240,232,.35);border-radius:50%;
   font-family:var(--serif);font-size:15px;line-height:1;padding-bottom:2px;
 }
-.brand-word{font-family:var(--serif);font-size:19px;letter-spacing:.14em;text-transform:uppercase}
+.brand-word{font-family:var(--serif);font-size:17px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.brand-tail{display:none}
 .head-nav{display:flex;gap:18px;font-size:12px;letter-spacing:.06em}
 .head-nav a{color:#b6afa4}
 .head-nav .nav-how{display:none}
@@ -300,7 +301,8 @@ p{margin:0}
   .head-nav{gap:26px;font-size:13px}
   .head-nav .nav-how{display:inline}
   .head-in{height:74px}
-  .brand-word{font-size:22px}
+  .brand-word{font-size:20px}
+  .brand-tail{display:inline}
   .grid{grid-template-columns:repeat(3,1fr);gap:20px}
   .hero{min-height:92svh}
   .hero-img{object-position:88% 50%}
