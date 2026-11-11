@@ -103,9 +103,9 @@ window.SILLAGE = {
   {{- end -}}
   ],
   freeOver: {{ $p.freeShippingOver }},
-  home: "{{ "/" | relURL }}",
-  shop: "{{ "/shop/" | relURL }}",
-  checkout: "{{ "/checkout/" | relURL }}"
+  home: "{{ .Site.Home.RelPermalink }}",
+  shop: "{{ (site.GetPage "/shop").RelPermalink }}",
+  checkout: "{{ (site.GetPage "/checkout").RelPermalink }}"
 };
 </script>
 <script src="{{ "js/cart.js" | relURL }}" defer></script>
