@@ -3,7 +3,7 @@
 <article class="pdp">
   <div class="wrap">
     <nav class="pdp-crumb" style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a938a;margin-bottom:16px">
-      <a href="{{ "/shop/" | relURL }}">Shop</a> / {{ .Params.family }}
+      <a href="{{ "shop/" | relURL }}">Shop</a> / {{ .Params.family }}
     </nav>
     <div class="pdp-grid">
       <div class="pdp-media">
@@ -61,7 +61,7 @@
         <p class="eyebrow">Also worth a wrist</p>
         <h2>Three more</h2>
       </div>
-      <a class="sec-link" href="{{ "/shop/" | relURL }}">See all</a>
+      <a class="sec-link" href="{{ "shop/" | relURL }}">See all</a>
     </div>
     <div class="grid">
       {{ $others := first 3 (where (where site.RegularPages "Section" "fragrances") "Title" "!=" .Title) }}

@@ -26,13 +26,13 @@
 
 <header class="site-head">
   <div class="wrap head-in">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ $p.brand }} home">
+    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ $p.brand }} home">
       <span class="brand-mark">S</span>
       <span class="brand-word">{{ $p.brand }}</span>
     </a>
     <nav class="head-nav" aria-label="Main">
-      <a class="nav-shop" href="{{ "/shop/" | relURL }}">Shop</a>
-      <a class="nav-how" href="{{ "/how-it-works/" | relURL }}">How it works</a>
+      <a class="nav-shop" href="{{ "shop/" | relURL }}">Shop</a>
+      <a class="nav-how" href="{{ "how-it-works/" | relURL }}">How it works</a>
     </nav>
     <button class="bag-btn" type="button" data-bag-open aria-label="Open bag">
       Bag <span class="bag-count" data-bag-count>0</span>
@@ -53,14 +53,14 @@
     <div class="foot-cols">
       <div>
         <h4>Shop</h4>
-        <a href="{{ "/shop/" | relURL }}">The collection</a>
-        <a href="{{ "/how-it-works/" | relURL }}">How decants work</a>
-        <a href="{{ "/shop/" | relURL }}#sizes">Sizes and prices</a>
+        <a href="{{ "shop/" | relURL }}">The collection</a>
+        <a href="{{ "how-it-works/" | relURL }}">How decants work</a>
+        <a href="{{ "shop/" | relURL }}#sizes">Sizes and prices</a>
       </div>
       <div>
         <h4>Help</h4>
-        <a href="{{ "/how-it-works/" | relURL }}#shipping">Shipping</a>
-        <a href="{{ "/how-it-works/" | relURL }}#faq">Questions</a>
+        <a href="{{ "how-it-works/" | relURL }}#shipping">Shipping</a>
+        <a href="{{ "how-it-works/" | relURL }}#faq">Questions</a>
         <a href="mailto:{{ $p.email }}">{{ $p.email }}</a>
       </div>
       <div>
@@ -88,7 +88,7 @@
     <div class="bag-foot">
       <p class="bag-ship" data-bag-ship></p>
       <div class="bag-total"><span>Subtotal</span><strong data-bag-total>$0</strong></div>
-      <a class="btn btn-fill btn-wide" href="{{ "/checkout/" | relURL }}" data-bag-checkout>Checkout</a>
+      <a class="btn btn-fill btn-wide" href="{{ "checkout/" | relURL }}" data-bag-checkout>Checkout</a>
       <p class="bag-note">Shipping calculated at checkout. NZ only.</p>
     </div>
   </aside>
