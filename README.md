@@ -33,7 +33,7 @@ Not real: the prices (placeholders), the fragrance names (invented), the photogr
 ## Deploy
 
 ```bash
-hugo --minify --gc --baseURL https://erichislop.github.io/sillage-preview/
-rsync -a --delete public/ ../.deploy-sillage/
-cd ../.deploy-sillage && git add -A && git commit -m "deploy" && git push -f origin gh-pages
+hugo --minify --gc --baseURL https://erichislop.github.io/topshelf-preview/
+rsync -a --delete public/ ../.deploy-tsf/
+cd ../.deploy-tsf && git add -A && git commit -m "deploy" && git push -f origin gh-pages
 ```
