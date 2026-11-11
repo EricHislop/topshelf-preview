@@ -29,18 +29,18 @@ if os.path.exists(hero):
     im = Image.blend(im, veil, 0.35)
     grad = Image.new("L", (1200, 1))
     for x in range(1200):
-        grad.putpixel((x, 0), int(238 * max(0.0, 1 - x / 760)))
+        grad.putpixel((x, 0), int(245 * max(0.0, 1 - x / 620)))
     grad = grad.resize(im.size)
     im = Image.composite(Image.new("RGB", im.size, (8, 8, 9)), im, grad)
     d = ImageDraw.Draw(im)
     try:
-        big = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf", 96)
+        big = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf", 78)
         small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 26)
     except Exception:
         big = small = ImageFont.load_default()
-    d.text((70, 250), "TOP SHELF", font=big, fill=(244, 240, 232))
-    d.text((72, 360), "FRAGRANCES", font=small, fill=(244, 240, 232))
-    d.text((74, 430), "Fragrance, by the millilitre.  5ml / 10ml / 15ml", font=small, fill=(201, 168, 106))
+    d.text((64, 268), "TOP SHELF", font=big, fill=(244, 240, 232))
+    d.text((66, 372), "FRAGRANCES", font=small, fill=(244, 240, 232))
+    d.text((66, 432), "Fragrance, by the millilitre.  5ml / 10ml / 15ml", font=small, fill=(201, 168, 106))
     im.save(os.path.join(OUT, "og.jpg"), "JPEG", quality=86)
     print("og", os.path.getsize(os.path.join(OUT, "og.jpg")))
 
