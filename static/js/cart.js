@@ -240,7 +240,7 @@
         return;
       }
 
-      const ref = "SLG-" + Math.random().toString(36).slice(2, 7).toUpperCase();
+      const ref = "TSF-" + Math.random().toString(36).slice(2, 7).toUpperCase();
       const total = $("[data-co-total]").textContent;
       const lines = bag.map((i) => lineName(i) + " " + i.size + "ml × " + i.qty).join("<br>");
       const done = $("[data-co-done]");
