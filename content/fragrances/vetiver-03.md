@@ -9,7 +9,7 @@ long = "Vetiver is the most grown-up note there is, and this one keeps the dirt 
 price5 = 27
 price10 = 42
 price15 = 55
-image = "vetiver-03.jpg"
+image = "vetiver-03.webp"
 tone = "#20211c"
 weight = 6
 +++

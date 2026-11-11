@@ -9,7 +9,7 @@ long = "Opens sharp and peppery, then settles into oud and leather with a soft a
 price5 = 29
 price10 = 45
 price15 = 59
-image = "noir-29.jpg"
+image = "noir-29.webp"
 tone = "#241d19"
 weight = 1
 +++

@@ -9,7 +9,7 @@ long = "Golden and rounded, sweet without tipping into dessert. It sits close fo
 price5 = 29
 price10 = 45
 price15 = 59
-image = "amber-soleil.jpg"
+image = "amber-soleil.webp"
 tone = "#2d2118"
 weight = 4
 +++

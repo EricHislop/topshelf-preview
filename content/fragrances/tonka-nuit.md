@@ -9,7 +9,7 @@ long = "Tonka and tobacco with a cherry on top. It is the loudest thing we sell 
 price5 = 29
 price10 = 45
 price15 = 59
-image = "tonka-nuit.jpg"
+image = "tonka-nuit.webp"
 tone = "#261c18"
 weight = 7
 +++

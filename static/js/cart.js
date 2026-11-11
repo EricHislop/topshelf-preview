@@ -247,10 +247,10 @@
       if (done) {
         done.innerHTML =
           '<p class="eyebrow">Order ' + ref + '</p>' +
-          '<h2>That is held for you.</h2>' +
-          '<p>We have your details, ' + get("name").split(" ")[0] + '. In the real shop this is where the card would be taken and the parcel posted.</p>' +
+          '<h2>Order in.</h2>' +
+          '<p>Thanks, ' + get("name").split(" ")[0] + '. We will email a confirmation now, and a tracking link once it is filled and posted from Wellington.</p>' +
           '<div class="co-recap"><p>' + lines + '</p><p class="co-recap-total">' + total + ' incl. shipping</p></div>' +
-          '<p class="co-note">This is a preview. Nothing has been charged and no order has been sent.</p>' +
+          '<p class="co-note">Preview build. No card was charged and no order was sent.</p>' +
           '<a class="btn btn-ghost" href="' + (S.shop || "/shop/") + '">Back to the collection</a>';
         done.hidden = false;
         form.hidden = true;

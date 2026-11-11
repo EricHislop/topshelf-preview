@@ -9,7 +9,7 @@ long = "Rose, cut with pepper and a salty base so it stays modern. Wears equally
 price5 = 27
 price10 = 42
 price15 = 55
-image = "salt-rose.jpg"
+image = "salt-rose.webp"
 tone = "#2b1e20"
 weight = 5
 +++

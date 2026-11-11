@@ -9,7 +9,7 @@ long = "Bright without being sharp, and salty rather than sweet. It is the one t
 price5 = 25
 price10 = 39
 price15 = 52
-image = "citrus-vert.jpg"
+image = "citrus-vert.webp"
 tone = "#1e2b2b"
 weight = 2
 +++

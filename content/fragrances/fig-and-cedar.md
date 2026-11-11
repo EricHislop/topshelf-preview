@@ -9,7 +9,7 @@ long = "Green and milky at once, which sounds wrong until you smell it. The ceda
 price5 = 27
 price10 = 42
 price15 = 55
-image = "fig-cedar.jpg"
+image = "fig-cedar.webp"
 tone = "#242a1e"
 weight = 3
 +++

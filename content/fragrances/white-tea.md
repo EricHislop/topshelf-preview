@@ -9,7 +9,7 @@ long = "Clean, quiet and close to the skin. The one for a hospital appointment, 
 price5 = 25
 price10 = 39
 price15 = 52
-image = "white-tea.jpg"
+image = "white-tea.webp"
 tone = "#262523"
 weight = 8
 +++
