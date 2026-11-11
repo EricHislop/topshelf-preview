@@ -26,7 +26,12 @@ if os.path.exists(hero):
         nh = int(w / target); im = im.crop((0, (h - nh) // 2, w, (h + nh) // 2))
     im = im.resize((1200, 630), Image.LANCZOS)
     veil = Image.new("RGB", im.size, (11, 11, 12))
-    im = Image.blend(im, veil, 0.45)
+    im = Image.blend(im, veil, 0.35)
+    grad = Image.new("L", (1200, 1))
+    for x in range(1200):
+        grad.putpixel((x, 0), int(238 * max(0.0, 1 - x / 760)))
+    grad = grad.resize(im.size)
+    im = Image.composite(Image.new("RGB", im.size, (8, 8, 9)), im, grad)
     d = ImageDraw.Draw(im)
     try:
         big = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf", 96)
