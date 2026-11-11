@@ -1,0 +1,108 @@
+{{ define "main" }}
+<section class="shop-hero">
+  <div class="wrap">
+    <p class="eyebrow">The short version</p>
+    <h1>A decant is a smaller bottle<br>of the same thing.</h1>
+    <p>We buy the full bottle, then fill 5ml, 10ml and 15ml atomisers from it. You get the real fragrance at a fraction of the price, sized to how much you will actually wear.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Sizes</p>
+        <h2>What you are buying</h2>
+      </div>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <span class="num">5ml</span>
+        <h3>About 40 sprays</h3>
+        <p>One month of daily wear, or a season of nights out. The cheap way to find out if a scent suits you.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">10ml</span>
+        <h3>About 80 sprays</h3>
+        <p>A season of regular wear. Fits a jacket pocket and clears airport security.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">15ml</span>
+        <h3>About 120 sprays</h3>
+        <p>For one you already know you love. Still well short of a full bottle, at a third of the cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bone" id="shipping">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" style="color:#8a7a5c">Shipping</p>
+        <h2>Posted from Wellington</h2>
+      </div>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <h3>$7 tracked</h3>
+        <p>Nationwide, signature not required. Free on orders over $120.</p>
+      </div>
+      <div class="why-item">
+        <h3>Two working days</h3>
+        <p>Filled to order. Rural delivery adds a day.</p>
+      </div>
+      <div class="why-item">
+        <h3>Returns</h3>
+        <p>Unopened vials can come back within 14 days. Opened ones cannot, for hygiene reasons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Questions</p>
+        <h2>Answered plainly</h2>
+      </div>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is this the genuine fragrance, or a copy?</summary>
+        <p>Genuine. Decanted from sealed retail bottles into clean glass atomisers. Nothing is added or diluted. If you have ever bought a sample from a department store counter, this is the same idea with a better sprayer.</p>
+      </details>
+      <details>
+        <summary>Why is it cheaper per millilitre than a full bottle?</summary>
+        <p>You are not paying for the bottle, the box, or the shelf space a 100ml takes up for two years. The liquid is the same; the packaging is not.</p>
+      </details>
+      <details>
+        <summary>How long does it last on skin?</summary>
+        <p>Between two and eight hours depending on the scent and your skin. Citrus goes first, amber and oud go last. Spraying on moisturised skin helps.</p>
+      </details>
+      <details>
+        <summary>Can I get one that is not listed?</summary>
+        <p>Ask. If it is available from our supplier in a full bottle, we can usually decant it.</p>
+      </details>
+      <details>
+        <summary>Can I send it as a gift?</summary>
+        <p>Yes. Add a note at checkout and we will leave the prices off the packing slip. Nothing on the outside says what is inside.</p>
+      </details>
+      <details>
+        <summary>Do you ship outside New Zealand?</summary>
+        <p>Not yet. Fragrance is classed as a dangerous good for air freight, which makes international post more trouble than it is worth at this size.</p>
+      </details>
+    </div>
+    <p style="margin-top:26px;font-size:14px;color:#9a938a">Anything else: <a href="mailto:{{ site.Params.email }}" style="color:#c9a86a">{{ site.Params.email }}</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Start with a 5ml.</h2>
+    <p>Eight fragrances. If one is wrong, it cost you about the price of a coffee and a bun.</p>
+    <a class="btn btn-fill" href="{{ "/shop/" | relURL }}">Shop the collection</a>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="shop-hero">
+  <div class="wrap">
+    <p class="eyebrow">The collection</p>
+    <h1>Eight fragrances, three sizes.</h1>
+    <p>Every scent is available in 5ml, 10ml and 15ml. Start small, come back for the one that sticks.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:34px">
+  <div class="wrap">
+    <div class="grid grid--shop">
+      {{ range where site.RegularPages "Section" "fragrances" }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section bone" id="sizes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" style="color:#8a7a5c">Sizes</p>
+        <h2>What the millilitres mean</h2>
+      </div>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <span class="num">5ml</span>
+        <h3>Try it</h3>
+        <p>About forty sprays. A month of daily wear, or a season of nights out. The cheapest way to be wrong.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">10ml</span>
+        <h3>Wear it</h3>
+        <p>About eighty sprays. Enough for a season, small enough for a jacket pocket or a carry on bag.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">15ml</span>
+        <h3>Keep it</h3>
+        <p>About a hundred and twenty sprays. For the one you already know. Still a third of a full bottle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

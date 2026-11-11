@@ -1,0 +1,113 @@
+{{- $p := site.Params -}}
+<!doctype html>
+<html lang="en-nz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>{{ if .IsHome }}{{ $p.brand }} · {{ $p.tagline }}{{ else }}{{ .Title }} · {{ $p.brand }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ $p.description }}{{ end }}">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+<link rel="icon" href="{{ "img/favicon.svg" | relURL }}" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ $p.brand }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ $p.brand }} · {{ $p.tagline }}{{ else }}{{ .Title }} · {{ $p.brand }}{{ end }}">
+<meta property="og:description" content="{{ $p.description }}">
+<meta property="og:image" content="{{ "img/og.jpg" | absURL }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="{{ with .Params.bodyClass }}{{ . }}{{ end }}">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ $p.brand }} home">
+      <span class="brand-mark">S</span>
+      <span class="brand-word">{{ $p.brand }}</span>
+    </a>
+    <nav class="head-nav" aria-label="Main">
+      <a href="{{ "/shop/" | relURL }}">Shop</a>
+      <a href="{{ "/how-it-works/" | relURL }}">How it works</a>
+    </nav>
+    <button class="bag-btn" type="button" data-bag-open aria-label="Open bag">
+      Bag <span class="bag-count" data-bag-count>0</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+{{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <span class="brand-mark">S</span>
+      <p class="foot-tag">{{ $p.tagline }}</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h4>Shop</h4>
+        <a href="{{ "/shop/" | relURL }}">The collection</a>
+        <a href="{{ "/how-it-works/" | relURL }}">How decants work</a>
+        <a href="{{ "/shop/" | relURL }}#sizes">Sizes and prices</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="{{ "/how-it-works/" | relURL }}#shipping">Shipping</a>
+        <a href="{{ "/how-it-works/" | relURL }}#faq">Questions</a>
+        <a href="mailto:{{ $p.email }}">{{ $p.email }}</a>
+      </div>
+      <div>
+        <h4>Where</h4>
+        <p>Filled in {{ $p.city }}<br>Posted NZ wide</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>© {{ now.Year }} {{ $p.brand }}. Demo build, no orders are taken and no card is charged.</p>
+    <p>Prices are placeholders for this preview.</p>
+  </div>
+</footer>
+
+<div class="bag" data-bag hidden>
+  <div class="bag-scrim" data-bag-close></div>
+  <aside class="bag-panel" role="dialog" aria-modal="true" aria-label="Your bag">
+    <div class="bag-top">
+      <h2>Your bag</h2>
+      <button class="bag-x" type="button" data-bag-close aria-label="Close bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="bag-items" data-bag-items></div>
+    <div class="bag-foot">
+      <p class="bag-ship" data-bag-ship></p>
+      <div class="bag-total"><span>Subtotal</span><strong data-bag-total>$0</strong></div>
+      <a class="btn btn-fill btn-wide" href="{{ "/checkout/" | relURL }}" data-bag-checkout>Checkout</a>
+      <p class="bag-note">Shipping calculated at checkout. NZ only.</p>
+    </div>
+  </aside>
+</div>
+
+<script>
+window.SILLAGE = {
+  products: [
+  {{- range $i, $f := where site.RegularPages "Section" "fragrances" -}}
+    {{- if $i }},{{ end -}}
+    {"slug":"{{ $f.File.BaseFileName }}","name":"{{ $f.Title }}","family":"{{ $f.Params.family }}","image":"{{ $f.Params.image }}","p5":{{ $f.Params.price5 }},"p10":{{ $f.Params.price10 }},"p15":{{ $f.Params.price15 }}}
+  {{- end -}}
+  ],
+  freeOver: {{ $p.freeShippingOver }},
+  home: "{{ "/" | relURL }}",
+  shop: "{{ "/shop/" | relURL }}",
+  checkout: "{{ "/checkout/" | relURL }}"
+};
+</script>
+<script src="{{ "js/cart.js" | relURL }}" defer></script>
+</body>
+</html>

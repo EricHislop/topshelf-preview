@@ -1,0 +1,52 @@
+{{ define "main" }}
+<section class="co">
+  <div class="wrap">
+    <p class="eyebrow">Checkout</p>
+    <h1>Two minutes, then it is on its way.</h1>
+    <p class="co-note">This is a preview build. The form is real, the card step is not connected.</p>
+
+    <div class="co-grid">
+      <div>
+        <form class="co-form" data-co-form novalidate>
+          <div class="field">
+            <label for="co-name">Name</label>
+            <input id="co-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="co-email">Email</label>
+            <input id="co-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="co-address">Address</label>
+            <input id="co-address" name="address" type="text" autocomplete="street-address" required>
+          </div>
+          <div class="two">
+            <div class="field">
+              <label for="co-city">City</label>
+              <input id="co-city" name="city" type="text" autocomplete="address-level2" required>
+            </div>
+            <div class="field">
+              <label for="co-postcode">Postcode</label>
+              <input id="co-postcode" name="postcode" type="text" autocomplete="postal-code" inputmode="numeric" required>
+            </div>
+          </div>
+          <p class="co-error" data-co-error hidden></p>
+          <button class="btn btn-fill btn-wide" type="submit">Place order</button>
+          <p class="co-note">Shipping is $7 tracked, free over $120. No card is charged in this preview.</p>
+        </form>
+        <div class="co-done" data-co-done hidden></div>
+      </div>
+
+      <aside class="co-summary" data-co-summary>
+        <h2>Your bag</h2>
+        <div data-co-items></div>
+        <div class="co-totals">
+          <div><span>Subtotal</span><span data-co-sub>$0</span></div>
+          <div><span>Shipping</span><span data-co-ship>$0</span></div>
+          <div class="co-grand"><span>Total</span><span data-co-total>$0</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,20 @@
+baseURL = "https://erichislop.github.io/sillage-preview/"
+languageCode = "en-nz"
+title = "Sillage"
+enableRobotsTXT = false
+
+[params]
+  brand = "Sillage"
+  tagline = "Fragrance, by the millilitre."
+  description = "Small-bottle decants of the fragrances worth wearing. 5ml, 10ml and 15ml, filled in Wellington."
+  currency = "NZD"
+  email = "hello@sillage.co.nz"
+  city = "Wellington"
+  freeShippingOver = 120
+  demoSite = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML"]

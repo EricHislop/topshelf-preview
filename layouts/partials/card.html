@@ -1,0 +1,19 @@
+{{- $f := . -}}{{- $slug := $f.File.BaseFileName -}}
+<article class="card">
+  <a class="card-media" href="{{ $f.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ printf "img/%s" $f.Params.image | relURL }}" alt="" loading="lazy" width="832" height="1040">
+  </a>
+  <div class="card-body">
+    <p class="card-fam">{{ $f.Params.family }}</p>
+    <h3 class="card-name"><a href="{{ $f.RelPermalink }}">{{ $f.Title }}</a></h3>
+    <p class="card-blurb">{{ $f.Params.blurb }}</p>
+    <div class="card-buy" data-product="{{ $slug }}">
+      <div class="sizes" role="group" aria-label="Size for {{ $f.Title }}">
+        <button type="button" class="is-on" data-size="5" aria-pressed="true">5ml</button>
+        <button type="button" data-size="10" aria-pressed="false">10ml</button>
+        <button type="button" data-size="15" aria-pressed="false">15ml</button>
+      </div>
+      <button type="button" class="btn-add" data-add>Add · ${{ $f.Params.price5 }}</button>
+    </div>
+  </div>
+</article>

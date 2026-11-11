@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{ $slug := .File.BaseFileName }}
+<article class="pdp">
+  <div class="wrap">
+    <nav class="pdp-crumb" style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a938a;margin-bottom:16px">
+      <a href="{{ "/shop/" | relURL }}">Shop</a> / {{ .Params.family }}
+    </nav>
+    <div class="pdp-grid">
+      <div class="pdp-media">
+        <img src="{{ printf "img/%s" .Params.image | relURL }}" alt="{{ .Title }} decant vial" width="832" height="1040">
+      </div>
+      <div class="pdp-info">
+        <p class="pdp-fam">{{ .Params.family }}</p>
+        <h1>{{ .Title }}</h1>
+        <p class="pdp-lede">{{ .Params.blurb }}</p>
+        <p class="pdp-long">{{ .Params.long }}</p>
+
+        <dl class="notes">
+          <div><dt>Top</dt><dd>{{ .Params.notes_top }}</dd></div>
+          <div><dt>Heart</dt><dd>{{ .Params.notes_heart }}</dd></div>
+          <div><dt>Base</dt><dd>{{ .Params.notes_base }}</dd></div>
+        </dl>
+
+        <div class="buy" data-product="{{ $slug }}">
+          <div class="buy-row">
+            <div class="sizes" role="group" aria-label="Size">
+              <button type="button" class="is-on" data-size="5" aria-pressed="true">5ml ${{ .Params.price5 }}</button>
+              <button type="button" data-size="10" aria-pressed="false">10ml ${{ .Params.price10 }}</button>
+              <button type="button" data-size="15" aria-pressed="false">15ml ${{ .Params.price15 }}</button>
+            </div>
+          </div>
+          <div class="buy-row">
+            <div class="qty">
+              <button type="button" data-step="-1" aria-label="Less">−</button>
+              <input type="number" value="1" min="1" max="20" step="1" data-qty-input aria-label="Quantity">
+              <button type="button" data-step="1" aria-label="More">+</button>
+            </div>
+            <button type="button" class="btn btn-fill" data-add style="flex:1">Add to bag · ${{ .Params.price5 }}</button>
+          </div>
+          <div class="buy-meta">
+            <span>Free shipping over $120</span>
+            <span>Posted in 2 working days</span>
+            <span>NZ only</span>
+          </div>
+        </div>
+
+        <div class="pdp-extra">
+          <div><h4>The bottle</h4><p>Glass atomiser with a matte black cap. Refillable, and small enough to carry.</p></div>
+          <div><h4>How it arrives</h4><p>Wrapped, boxed, tracked post. Nothing on the outside says what is inside.</p></div>
+          <div><h4>If it is wrong</h4><p>Unopened vials can come back within 14 days. Opened ones cannot, for hygiene.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Also worth a wrist</p>
+        <h2>Three more</h2>
+      </div>
+      <a class="sec-link" href="{{ "/shop/" | relURL }}">See all</a>
+    </div>
+    <div class="grid">
+      {{ $others := first 3 (where (where site.RegularPages "Section" "fragrances") "Title" "!=" .Title) }}
+      {{ range $others }}{{ partial "card.html" . }}{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

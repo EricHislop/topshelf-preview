@@ -1,0 +1,130 @@
+{{ define "main" }}
+<section class="hero">
+  <img class="hero-img" src="{{ "img/hero.webp" | relURL }}" alt="Three fragrance vials on dark stone" width="1216" height="832" fetchpriority="high">
+  <div class="hero-veil"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow">Decants · Wellington</p>
+    <h1>A wardrobe of scent,<br><em>by the millilitre.</em></h1>
+    <p class="hero-sub">5, 10 and 15 mil bottles of fragrances worth wearing. Enough to know if you love it, without paying for a full bottle you never finish.</p>
+    <div class="hero-cta">
+      <a class="btn btn-fill" href="{{ "/shop/" | relURL }}">Shop the collection</a>
+      <a class="btn btn-ghost" href="{{ "/how-it-works/" | relURL }}">How decants work</a>
+    </div>
+  </div>
+</section>
+
+<section class="facts">
+  <div class="wrap facts-in">
+    <div class="fact"><b>8</b><span>Fragrances, chosen not scraped</span></div>
+    <div class="fact"><b>3</b><span>Sizes from 5ml</span></div>
+    <div class="fact"><b>NZ</b><span>Filled and posted from Wellington</span></div>
+  </div>
+</section>
+
+<section class="section" id="collection">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">The collection</p>
+        <h2>Eight worth your wrist</h2>
+      </div>
+      <a class="sec-link" href="{{ "/shop/" | relURL }}">See all</a>
+    </div>
+    <div class="grid">
+      {{ range where site.RegularPages "Section" "fragrances" }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section bone">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" style="color:#8a7a5c">Why small</p>
+        <h2>A full bottle is a guess</h2>
+      </div>
+    </div>
+    <div class="why">
+      <div class="why-item">
+        <span class="num">01</span>
+        <h3>Try it on your own skin</h3>
+        <p>Scent changes over an hour. A 5ml lasts about forty wears, which is long enough to find out.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">02</span>
+        <h3>Five, ten, fifteen</h3>
+        <p>Start at 5ml. If it becomes the one, take 15ml and still spend less than a department store bottle.</p>
+      </div>
+      <div class="why-item">
+        <span class="num">03</span>
+        <h3>Same juice, smaller glass</h3>
+        <p>Decanted from sealed bottles into clean atomisers. No dilution, no water, no reformulation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps, no account</h2>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-n">01</span>
+        <div><h3>Pick a scent</h3><p>Read the notes, choose a size. Not sure? Take the 5ml.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-n">02</span>
+        <div><h3>We fill it</h3><p>Filled to order in Wellington and posted within two working days.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-n">03</span>
+        <div><h3>Wear it</h3><p>Spray on skin, not clothes. If it is not for you, the 5ml cost you $25.</p></div>
+      </div>
+    </div>
+    <figure class="trio">
+      <img src="{{ "img/trio.webp" | relURL }}" alt="Three decant vials of different sizes on stone" loading="lazy" width="1216" height="760">
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Questions</p>
+        <h2>The short answers</h2>
+      </div>
+      <a class="sec-link" href="{{ "/how-it-works/" | relURL }}#faq">More</a>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>How long does a 5ml last?</summary>
+        <p>About forty sprays, so roughly a month of daily wear, or a season of occasional wear. A 15ml is about three times that.</p>
+      </details>
+      <details>
+        <summary>Is it the real fragrance?</summary>
+        <p>Yes. Decanted from sealed retail bottles into clean glass atomisers. Nothing is added, diluted or blended.</p>
+      </details>
+      <details>
+        <summary>How much is shipping?</summary>
+        <p>$7 tracked within New Zealand, free over $120. Posted from Wellington within two working days.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Find the one you keep reaching for.</h2>
+    <p>Eight fragrances, three sizes, and a 5ml that costs less than lunch.</p>
+    <a class="btn btn-fill" href="{{ "/shop/" | relURL }}">Shop the collection</a>
+  </div>
+</section>
+{{ end }}
