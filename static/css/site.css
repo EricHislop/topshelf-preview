@@ -71,6 +71,7 @@ p{margin:0}
 }
 .brand-word{font-family:var(--serif);font-size:19px;letter-spacing:.14em;text-transform:uppercase}
 .head-nav{display:flex;gap:18px;font-size:12px;letter-spacing:.06em}
+.head-nav a{color:#b6afa4}
 .head-nav .nav-how{display:none}
 .head-nav a{color:var(--mut)}
 .head-nav a:hover{color:var(--bone)}
@@ -92,7 +93,7 @@ p{margin:0}
   background:linear-gradient(180deg,rgba(11,11,12,.58) 0%,rgba(11,11,12,.22) 30%,rgba(11,11,12,.72) 58%,rgba(11,11,12,.92) 82%,var(--ink) 100%);
 }
 .hero-in{position:relative;padding-top:120px;padding-bottom:34px;max-width:760px}
-.hero h1{font-family:var(--serif);font-size:clamp(40px,12vw,84px);line-height:.94;letter-spacing:-.03em;margin:14px 0 18px;text-wrap:balance}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,12vw,84px);line-height:.94;letter-spacing:-.03em;margin:14px 0 22px;text-wrap:balance}
 .hero-sub{max-width:40ch;color:#e4ddd0;font-size:16px;line-height:1.5}
 .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .hero-cta .btn{flex:1 1 190px}
@@ -302,13 +303,13 @@ p{margin:0}
   .brand-word{font-size:22px}
   .grid{grid-template-columns:repeat(3,1fr);gap:20px}
   .hero{min-height:92svh}
-  .hero-img{object-position:72% 50%}
+  .hero-img{object-position:88% 50%}
   .hero-veil{
     background:
-      linear-gradient(90deg,rgba(11,11,12,.94) 0%,rgba(11,11,12,.78) 34%,rgba(11,11,12,.28) 62%,rgba(11,11,12,.05) 100%),
+      linear-gradient(90deg,rgba(11,11,12,.97) 0%,rgba(11,11,12,.93) 38%,rgba(11,11,12,.55) 60%,rgba(11,11,12,.08) 100%),
       linear-gradient(180deg,rgba(11,11,12,.35) 0%,rgba(11,11,12,0) 30%,rgba(11,11,12,.55) 88%,var(--ink) 100%);
   }
-  .hero-in{padding-bottom:64px}
+  .hero-in{padding-bottom:64px;max-width:620px}
   .hero-cta .btn{flex:0 0 auto;min-width:210px}
   .hero-sub{font-size:17px}
   .section{padding:84px 0}
